@@ -1,4 +1,3 @@
-// Task List App JavaScript
 class TaskListApp {
     constructor() {
         this.tasks = [];
@@ -14,19 +13,19 @@ class TaskListApp {
     }
 
     bindEvents() {
-        // Add task button
+  
         document.getElementById('addButton').addEventListener('click', () => {
             this.addTask();
         });
 
-        // Enter key in input field
+
         document.getElementById('taskInput').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 this.addTask();
             }
         });
 
-        // Filter buttons
+    
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 this.setFilter(e.target.dataset.filter);
@@ -55,7 +54,7 @@ class TaskListApp {
         this.renderTasks();
         this.updateEmptyMessage();
         
-        // Clear input and focus
+ 
         input.value = '';
         input.focus();
         
@@ -87,8 +86,7 @@ class TaskListApp {
 
     setFilter(filter) {
         this.currentFilter = filter;
-        
-        // Update active filter button
+    
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.classList.remove('active');
         });
@@ -125,7 +123,7 @@ class TaskListApp {
                 <button class="delete-btn">Delete</button>
             `;
 
-            // Bind events for this task
+       
             const checkbox = li.querySelector('.task-checkbox');
             const deleteBtn = li.querySelector('.delete-btn');
 
@@ -195,12 +193,12 @@ class TaskListApp {
     }
 
     showMessage(message, type = 'info') {
-        // Create a temporary message element
+       
         const messageEl = document.createElement('div');
         messageEl.className = `message message-${type}`;
         messageEl.textContent = message;
         
-        // Style the message
+      
         Object.assign(messageEl.style, {
             position: 'fixed',
             top: '20px',
@@ -216,7 +214,7 @@ class TaskListApp {
             wordWrap: 'break-word'
         });
 
-        // Set background color based on type
+    
         switch (type) {
             case 'success':
                 messageEl.style.background = 'linear-gradient(135deg, #28a745 0%, #20c997 100%)';
@@ -230,12 +228,12 @@ class TaskListApp {
 
         document.body.appendChild(messageEl);
 
-        // Animate in
+
         setTimeout(() => {
             messageEl.style.transform = 'translateX(0)';
         }, 100);
 
-        // Remove after 3 seconds
+
         setTimeout(() => {
             messageEl.style.transform = 'translateX(100%)';
             setTimeout(() => {
@@ -247,28 +245,28 @@ class TaskListApp {
     }
 }
 
-// Initialize the app when the DOM is loaded
+
 document.addEventListener('DOMContentLoaded', () => {
     new TaskListApp();
 });
 
-// Add some utility functions for better user experience
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Focus on input field when page loads
+
     const taskInput = document.getElementById('taskInput');
     if (taskInput) {
         taskInput.focus();
     }
 
-    // Add keyboard shortcuts
+
     document.addEventListener('keydown', (e) => {
-        // Ctrl/Cmd + Enter to add task
+ 
         if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
             e.preventDefault();
             document.getElementById('addButton').click();
         }
         
-        // Escape to clear input
+    
         if (e.key === 'Escape') {
             const input = document.getElementById('taskInput');
             input.value = '';
