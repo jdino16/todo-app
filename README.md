@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Task List App 📝
 
 A modern, responsive web application for managing daily tasks built with vanilla HTML, CSS, and JavaScript.
@@ -89,3 +90,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 **Built with ❤️ using vanilla HTML, CSS, and JavaScript**
+=======
+# todo-app
+A modern Task List App built with HTML, CSS, and JavaScript
+>>>>>>> 0d8e5ab803b0b8f105db70206a50cd2529215bba
