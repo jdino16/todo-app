@@ -17,5 +17,5 @@
 - `script.js` - App functionality
 
 
-Just open `index.html` in any web browser.
-
+Just open `index.html` in any web browser. or click 
+start index.html 
